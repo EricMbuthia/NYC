@@ -12,9 +12,6 @@
 
 	<!-- Bootstrap -->
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-	<!-- Javascript --->
-
-	    {% block javascript2 %}{% endblock %}
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,9 +36,9 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="nav-toggle">
 				<ul class="nav navbar-nav">
-				<li><a href="{% url 'authetr:login' %}">login</a></li>
-				<li><a href="{% url 'authetr:registration' %}">register</a></li>
-				<li><a href="{% url 'authetr:logout' %}">logout</a></li>			
+				<li><a href="{% url 'login' %}">login</a></li>
+				<li><a href="{% url 'registration' %}">register</a></li>
+				<li><a href="{% url 'logout' %}">logout</a></li>			
 				</ul>
 			</div>
 		</div>
@@ -62,13 +59,13 @@
 			</div>
 		</div>
 	</div>
-	        <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+	        	<!-- <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
 
 <script src="{% static 'js/bootstrap.dataTables.js' %}"></script>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<!--<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script> -->
+	<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.4.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     {% block javascript %}{% endblock %}
 	{% block scripts %}{% endblock %}
 

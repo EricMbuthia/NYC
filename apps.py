@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class PassengerConfig(AppConfig):
-    name = 'passenger'
+class DefaultConfig(AppConfig):
+    name = 'authetr'

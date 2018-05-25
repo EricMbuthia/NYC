@@ -162,20 +162,20 @@ $(function() {
 
       return false;
     }); 
-	$("#payTicket").click(function(e) {  
+	$("#submitLogin").click(function(e) {  
       e.preventDefault();
-      new_ticket_data = $('#ticket_pay').serialize();
+      new_login_data = $('#loginForm').serialize();
       $.ajax({
           type:"POST",
-          url:"/passenger/payTicket/",
-          data: new_ticket_data,
+          url:"/authetr/login/",
+          data: new_login_data,
           beforeSend: function() {
              //$('#messacge').html("<h2>Registration Form Submitted!</h2>")
           },
           cache: false,
           dataType: "json",
           success: function(data){
-		  alert("Success");
+		  //alert("Success");
             //$(".error").css({ 'display': "none" });
           //  if(!data['form_saved']){
 			/*alert(data['errors']);
@@ -201,7 +201,7 @@ $(function() {
       }); 
 
       return false;
-    });     
+    });    	
 });
     
    

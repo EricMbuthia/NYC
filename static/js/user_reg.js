@@ -1,37 +1,6 @@
 $(function() {    
-         Stripe.setPublishableKey('pk_test_vyrZcfjLWZioZ3bOrrCe4rcj');
-       function addInputNames() {
-                    // Not ideal, but jQuery's validate plugin requires fields to have names
-                    // so we add them at the last possible minute, in case any javascript 
-                    // exceptions have caused other parts of the script to fail.
-                    $(".card-number").attr("name", "card-number");
-                    $(".card-cvc").attr("name", "card-cvc");
-                    $(".card-expiry-year").attr("name", "card-expiry-year");
-                }
-         function removeInputNames() {
-                    $(".card-number").removeAttr("name");
-                    $(".card-cvc").removeAttr("name");
-                    $(".card-expiry-year").removeAttr("name");
-                }
-			function makeToken(){
-			
-			
-			
-			}
+     
     $("#regButton").click(function(e) {  
-removeInputNames(); 
-
-stripe.createToken('card', {
-						number: $('.card-number').val(),
-                        cvc: $('.card-cvc').val(),
-                        exp_month: $('.card-expiry-month').val(), 
-                        exp_year: $('.card-expiry-year').val()
-}).then(function(result) {
-console.log(result.token);
-	form.append(result.token)
-  // Handle result.error or result.token
-});
-
       e.preventDefault();
       new_user_data = $('#user_registration_form').serialize();
       $.ajax({
@@ -39,7 +8,7 @@ console.log(result.token);
           url:"/regApp/register/",
           data: new_user_data,
           beforeSend: function() {
-
+             //fdfsd4AQ2@ $('#messacge').html("<h2>Registration Form Submitted!</h2>")
           },
           cache: false,
           dataType: "json",
