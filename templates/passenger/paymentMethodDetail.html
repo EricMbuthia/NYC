@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-3"><strong>Customer Id:</strong></div>
+		<div class="col-md-9">{{ object.customer_id }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Card Last 4 Numbers:</strong></div>
+		<div class="col-md-9">{{ object.card_number }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Expiry Month:</strong></div>
+		<div class="col-md-9">{{ object.expiry_month }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Expiry Year:</strong></div>
+		<div class="col-md-9">{{ object.expiry_year }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3"><strong>Card Id:</strong></div>
+		<div class="col-md-9">{{ object.card_id }}</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<a href="{% url 'passenger:paymentMethod' %}">Return to list</a>
+		</div>
+	</div>
+{% endblock %}
