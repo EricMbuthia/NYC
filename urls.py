@@ -22,5 +22,5 @@ urlpatterns = [
     path('passenger/',include('passenger.urls',namespace="passenger")),
     path('driver/',include('driver.urls',namespace="driver")),
     path('authetr/', include('authetr.urls',namespace="authetr")),
-	path('dispatch/', include('dispatch.urls',namespace="dispatch")),
+	#path('dispatch/', include('dispatch.urls',namespace="dispatch")),
 ]
